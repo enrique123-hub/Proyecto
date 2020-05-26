@@ -1,0 +1,81 @@
+﻿@model ProyectoPr1mal.Models.UserViewModel.UserViewModel
+@{
+    ViewBag.Title = "Agregar nuevo usuario";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("add", "User", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationMessage("Error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.Nombre)
+            @Html.TextAreaFor(d=>d.Nombre, new { @class="form-control"})
+
+            @Html.LabelFor(d => d.Namiento)
+            @Html.TextAreaFor(d => d.Namiento, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Genero)
+            @Html.TextAreaFor(d=>d.Genero, new { @class="form-control"})
+
+            @Html.LabelFor(d => d.Edad)
+            @Html.TextAreaFor(d => d.Edad, new { @class="form-control"})
+
+            @Html.LabelFor(d => d.Celular)
+            @Html.TextAreaFor(d => d.Celular, new { @class="form-control"})
+
+            @Html.LabelFor(d => d.Direccion)
+            @Html.TextAreaFor(d=>d.Direccion, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Registro)
+            @Html.TextAreaFor(d=>d.Registro, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Nip)
+            @Html.TextAreaFor(d=>d.Nip, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Email)
+            @Html.TextAreaFor(d=>d.Email, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Pass)
+            @Html.PasswordFor(d=>d.Pass, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.ConfirmPass)
+            @Html.PasswordFor(d=>d.ConfirmPass, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Altura)
+            @Html.TextAreaFor(d=>d.Altura, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Peso)
+            @Html.TextAreaFor(d=>d.Peso, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Imc)
+            @Html.TextAreaFor(d=>d.Imc, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Corporal)
+            @Html.TextAreaFor(d=>d.Corporal, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Metabolismo)
+            @Html.TextAreaFor(d=>d.Metabolismo, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Grasa)
+            @Html.TextAreaFor(d=>d.Grasa, new { @class = "form-control" })
+
+            @Html.LabelFor(d=>d.Musculo)
+            @Html.TextAreaFor(d=>d.Musculo, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Numero)
+            @Html.TextAreaFor(d=>d.Numero, new { @class="form-control"})
+
+            @Html.LabelFor(d=>d.Observciones)
+            @Html.TextAreaFor(d=>d.Observciones, new { @class="form-control"})
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Registrar" />
+            </div>
+        }
+    </div>
+</div>

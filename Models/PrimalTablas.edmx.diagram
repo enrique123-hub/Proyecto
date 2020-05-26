@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7935735b0e074465a4ce0a181d1ff031" Name="Diagram1">
+        <EntityTypeShape EntityType="Pr1malRegistrosModel.cstate" Width="1.5" PointX="4" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pr1malRegistrosModel.RegistroClien" Width="1.5" PointX="6.375" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pr1malRegistrosModel.RegistroEmple" Width="1.5" PointX="1.625" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="Pr1malRegistrosModel.FK_RegistroClien_cstate" ManuallyRouted="false" />
+        <AssociationConnector Association="Pr1malRegistrosModel.FK_RegistroEmple_cstate" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

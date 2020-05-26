@@ -1,0 +1,39 @@
+﻿@model List<ProyectoPr1mal.Models.TablaViewModels.UserTablaViewModels>
+@{
+    ViewBag.Title = "IndexFisi";
+}
+
+<h2>Datos Fisicos</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Imc</th>
+                <th>Corporal</th>
+                <th>Metabolismo</th>
+                <th>Grasa</th>
+                <th>Musculo</th>
+            </tr>
+
+            @foreach (var oDatos in Model)
+            {
+                <tr>
+                    <td>@oDatos.Id</td>
+                    <td>@oDatos.Nombre</td>
+                    <td>@oDatos.Altura</td>
+                    <td>@oDatos.Peso</td>
+                    <td>@oDatos.Imc</td>
+                    <td>@oDatos.Corporal</td>
+                    <td>@oDatos.Metabolismo</td>
+                    <td>@oDatos.Grasa</td>
+                    <td>@oDatos.Musculo</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

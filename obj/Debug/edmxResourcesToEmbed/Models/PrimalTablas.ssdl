@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Pr1malRegistrosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cstate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroClien">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nacimiento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Genero" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Celular" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Registro" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nip" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Altura" Type="float" Nullable="false" />
+    <Property Name="Peso" Type="float" Nullable="false" />
+    <Property Name="Imc" Type="float" Nullable="false" />
+    <Property Name="Corporal" Type="float" Nullable="false" />
+    <Property Name="Metabolismo" Type="int" Nullable="false" />
+    <Property Name="Grasa" Type="float" Nullable="false" />
+    <Property Name="Musculo" Type="float" Nullable="false" />
+    <Property Name="Numero" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="isState" Type="int" />
+  </EntityType>
+  <EntityType Name="RegistroEmple">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Namiento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Celular" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Registro" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="Nip" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="nchar" MaxLength="15" />
+    <Property Name="Altura" Type="float" Nullable="false" />
+    <Property Name="Peso" Type="float" Nullable="false" />
+    <Property Name="Imc" Type="float" Nullable="false" />
+    <Property Name="Corporal" Type="float" Nullable="false" />
+    <Property Name="Metabolismo" Type="int" Nullable="false" />
+    <Property Name="Grasa" Type="float" Nullable="false" />
+    <Property Name="Musculo" Type="float" Nullable="false" />
+    <Property Name="Numero" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Observciones" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="idState" Type="int" />
+  </EntityType>
+  <Association Name="FK_RegistroClien_cstate">
+    <End Role="cstate" Type="Self.cstate" Multiplicity="0..1" />
+    <End Role="RegistroClien" Type="Self.RegistroClien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cstate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistroClien">
+        <PropertyRef Name="isState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroEmple_cstate">
+    <End Role="cstate" Type="Self.cstate" Multiplicity="0..1" />
+    <End Role="RegistroEmple" Type="Self.RegistroEmple" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cstate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistroEmple">
+        <PropertyRef Name="idState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Pr1malRegistrosModelStoreContainer">
+    <EntitySet Name="cstate" EntityType="Self.cstate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistroClien" EntityType="Self.RegistroClien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistroEmple" EntityType="Self.RegistroEmple" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_RegistroClien_cstate" Association="Self.FK_RegistroClien_cstate">
+      <End Role="cstate" EntitySet="cstate" />
+      <End Role="RegistroClien" EntitySet="RegistroClien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroEmple_cstate" Association="Self.FK_RegistroEmple_cstate">
+      <End Role="cstate" EntitySet="cstate" />
+      <End Role="RegistroEmple" EntitySet="RegistroEmple" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

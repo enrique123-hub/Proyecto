@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR1MAL STREGTH AND MOVEMENT</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("PR1MAL STREGTH AND MOVEMENT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+
+                    <li nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="desplegable" href="#">
+                            Personal del gym
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">@Html.ActionLink("Registro", "Index", "User")</a><br />
+                            <a class="dropdown-item">@Html.ActionLink("Datos fisicos", "IndexFisi", "User")</a>
+                        </div>
+                    </li>
+                    <li nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="desplegable" href="#">
+                            Clientes del gym
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">@Html.ActionLink("Clientes", "DatosCliente", "ClienteUser")</a><br />
+                            <a class="dropdown-item">@Html.ActionLink("Datos fisicos del cliente", "ClienteFisi", "ClienteUser")</a>
+                        </div>
+                    </li>
+                    <li>@Html.ActionLink("Cerrar sesion", "LogOff", "Cerrar")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

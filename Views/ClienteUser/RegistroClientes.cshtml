@@ -1,0 +1,92 @@
+﻿@model ProyectoPr1mal.Models.ClienteUserViewModel.ClienteUserViewModel
+@{
+    ViewBag.Title = "RegistroClientes";
+}
+
+<h2>RegistroClientes</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("RegistroClientes", "ClienteUser", FormMethod.Post, new { role = "form", @class = "" }))
+        {
+
+            @Html.ValidationMessage("Error", new { @class = "text-danger" })
+
+            @Html.LabelFor(c => c.Nombre)
+            @Html.TextAreaFor(c => c.Nombre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Nombre)<br />
+
+            @Html.LabelFor(c => c.Nacimiento)
+            @Html.TextAreaFor(c => c.Nacimiento, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Nacimiento)<br />
+
+            @Html.LabelFor(c => c.Genero)
+            @Html.TextAreaFor(c => c.Genero, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Genero)<br />
+
+            @Html.LabelFor(c => c.Edad)
+            @Html.TextAreaFor(c => c.Edad, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Edad)<br />
+
+            @Html.LabelFor(c => c.Celular)
+            @Html.TextAreaFor(c => c.Celular, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Celular)<br />
+
+            @Html.LabelFor(c => c.Direccion)
+            @Html.TextAreaFor(c => c.Direccion, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Direccion)<br />
+
+            @Html.LabelFor(c => c.Registro)
+            @Html.TextAreaFor(c => c.Registro, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Registro)<br />
+
+            @Html.LabelFor(c => c.Nip)
+            @Html.TextAreaFor(c => c.Nip, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Nip)<br />
+
+            @Html.LabelFor(c => c.Email)
+            @Html.TextAreaFor(c => c.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Email)<br />
+
+            @Html.LabelFor(c => c.Altura)
+            @Html.TextAreaFor(c => c.Altura, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Altura)<br />
+
+            @Html.LabelFor(c => c.Peso)
+            @Html.TextAreaFor(d => d.Peso, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Peso)<br />
+
+            @Html.LabelFor(c => c.Imc)
+            @Html.TextAreaFor(c => c.Imc, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Imc)<br />
+
+            @Html.LabelFor(c => c.Corporal)
+            @Html.TextAreaFor(c => c.Corporal, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Corporal)<br />
+
+            @Html.LabelFor(c => c.Metabolismo)
+            @Html.TextAreaFor(c => c.Metabolismo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Metabolismo)<br />
+
+            @Html.LabelFor(c => c.Grasa)
+            @Html.TextAreaFor(c => c.Grasa, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Grasa)<br />
+
+            @Html.LabelFor(c => c.Musculo)
+            @Html.TextAreaFor(c => c.Musculo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Musculo)<br />
+
+            @Html.LabelFor(c => c.Numero)
+            @Html.TextAreaFor(c => c.Numero, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Numero)<br />
+
+            @Html.LabelFor(c => c.Observaciones)
+            @Html.TextAreaFor(c => c.Observaciones, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Observaciones)<br />
+
+            <div style="text-align:right">
+                <input type="submit" class="btn btn-success" value="Registrar" />
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Pr1malRegistrosModelStoreContainer" CdmEntityContainer="Pr1malRegistrosEntities">
+    <EntitySetMapping Name="cstate">
+      <EntityTypeMapping TypeName="Pr1malRegistrosModel.cstate">
+        <MappingFragment StoreEntitySet="cstate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroClien">
+      <EntityTypeMapping TypeName="Pr1malRegistrosModel.RegistroClien">
+        <MappingFragment StoreEntitySet="RegistroClien">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Nacimiento" ColumnName="Nacimiento" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="Nip" ColumnName="Nip" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Altura" ColumnName="Altura" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Imc" ColumnName="Imc" />
+          <ScalarProperty Name="Corporal" ColumnName="Corporal" />
+          <ScalarProperty Name="Metabolismo" ColumnName="Metabolismo" />
+          <ScalarProperty Name="Grasa" ColumnName="Grasa" />
+          <ScalarProperty Name="Musculo" ColumnName="Musculo" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="isState" ColumnName="isState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroEmple">
+      <EntityTypeMapping TypeName="Pr1malRegistrosModel.RegistroEmple">
+        <MappingFragment StoreEntitySet="RegistroEmple">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Namiento" ColumnName="Namiento" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="Nip" ColumnName="Nip" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Altura" ColumnName="Altura" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Imc" ColumnName="Imc" />
+          <ScalarProperty Name="Corporal" ColumnName="Corporal" />
+          <ScalarProperty Name="Metabolismo" ColumnName="Metabolismo" />
+          <ScalarProperty Name="Grasa" ColumnName="Grasa" />
+          <ScalarProperty Name="Musculo" ColumnName="Musculo" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Observciones" ColumnName="Observciones" />
+          <ScalarProperty Name="idState" ColumnName="idState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
